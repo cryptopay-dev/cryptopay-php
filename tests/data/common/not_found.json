@@ -1,0 +1,10 @@
+{
+  "error": {
+    "code": "not_found",
+    "message": "not found",
+    "details": []
+  },
+  "meta": {
+    "request_id": "1bd79df91f60d973bbc4583d4be241d5"
+  }
+}

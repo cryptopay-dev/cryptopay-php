@@ -1,0 +1,19 @@
+{
+  "error": {
+    "code": "invalid",
+    "message": "invalid",
+    "details": [
+      {
+        "code": "invalid_coin_address",
+        "target": "address",
+        "message": "must be a valid BTC address",
+        "args": {
+          "currency": "BTC"
+        }
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "bcbfc59d960f0a84d028f2933b9e2ddd"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "error": {
+    "code": "ip_not_allowed",
+    "message": "ip not allowed",
+    "details": []
+  },
+  "meta": {
+    "request_id": "3a9e2783f0e5601ce7a78a0da3721b38"
+  }
+}

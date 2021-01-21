@@ -1,0 +1,10 @@
+{
+  "error": {
+    "code": "duplicate_custom_id",
+    "message": "duplicate custom id",
+    "details": []
+  },
+  "meta": {
+    "request_id": "58fb3e2fe90ffc278ce517df74daee56"
+  }
+}

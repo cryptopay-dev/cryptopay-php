@@ -1,0 +1,17 @@
+{
+  "error": {
+    "code": "invalid",
+    "message": "invalid",
+    "details": [
+      {
+        "code": "must_be_uuid",
+        "target": "account_id",
+        "message": "must match uuid format",
+        "args": {}
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "01c662e30f28b67518b87dfdc4358257"
+  }
+}

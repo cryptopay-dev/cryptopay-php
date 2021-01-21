@@ -1,0 +1,25 @@
+{
+  "error": {
+    "code": "invalid",
+    "message": "invalid",
+    "details": [
+      {
+        "code": "must_be_included_in",
+        "target": "currency",
+        "message": "must be one of: BTC, LTC, XRP, ETH, BCH",
+        "args": {
+          "list": [
+            "BTC",
+            "LTC",
+            "XRP",
+            "ETH",
+            "BCH"
+          ]
+        }
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "77a231970e686b064f4c4cdf6c9825be"
+  }
+}

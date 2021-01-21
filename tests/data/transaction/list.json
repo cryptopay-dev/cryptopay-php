@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": "2968a097-057c-43c9-9a64-036ec0ce8fc8",
+      "custom_id": "\"19069\"",
+      "customer_id": null,
+      "amount": "0.00097753",
+      "currency": "BTC",
+      "balance": "2.23467173",
+      "fee": "0.00000988",
+      "fee_currency": "BTC",
+      "reference_id": "09c6296a-e026-43f1-b999-95ddf2a9590f",
+      "reference_type": "Invoice",
+      "description": "#19069",
+      "status": "cancelled",
+      "status_context": null,
+      "risk": null,
+      "created_at": "2020-05-04T16:51:18+00:00"
+    },
+    {
+      "id": "a803b775-b08d-426c-a2ae-747cca9585e5",
+      "custom_id": "\"19066\"",
+      "customer_id": null,
+      "amount": "0.0129929",
+      "currency": "BTC",
+      "balance": "2.23467173",
+      "fee": "0.00013125",
+      "fee_currency": "BTC",
+      "reference_id": "644a0ab5-81f0-4bca-9c6a-22742b50e16f",
+      "reference_type": "Invoice",
+      "description": "#19066",
+      "status": "cancelled",
+      "status_context": null,
+      "risk": null,
+      "created_at": "2020-05-04T14:14:03+00:00"
+    },
+    {
+      "id": "8051bfe0-6044-47ec-8a07-eab1b3386957",
+      "custom_id": null,
+      "customer_id": null,
+      "amount": "0.00125023",
+      "currency": "BTC",
+      "balance": "2.23467173",
+      "fee": null,
+      "fee_currency": null,
+      "reference_id": "4c52a42b-d59f-40de-826f-195070071715",
+      "reference_type": "CoinDeposit",
+      "description": null,
+      "status": "completed",
+      "status_context": null,
+      "risk": {
+        "score": 7.71,
+        "level": "high",
+        "resource_name": "default",
+        "resource_category": "unknown"
+      },
+      "created_at": "2020-05-01T08:02:36+00:00"
+    }
+  ],
+  "meta": {
+    "total": 2719,
+    "has_more": true
+  }
+}

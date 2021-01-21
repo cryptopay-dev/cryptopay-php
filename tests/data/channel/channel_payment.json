@@ -1,0 +1,27 @@
+{
+  "data": {
+    "id": "97aef8f1-4948-43ef-b0be-c59cd62ad4ca",
+    "paid_amount": "0.003",
+    "paid_currency": "BTC",
+    "received_amount": "0.00297",
+    "received_currency": "BTC",
+    "fee": "0.00003",
+    "fee_currency": "BTC",
+    "txid": "c6e5aac6a18e98eb9771ce0e394727aea516c8f66a3fc3c153ded3d7116dee3e",
+    "status": "completed",
+    "status_context": null,
+    "refund_address": null,
+    "coin_withdrawal_id": null,
+    "custom_id": "2",
+    "customer_id": null,
+    "channel_id": "130c4b3c-7281-4cf6-852a-76a05b7b5315",
+    "address": "2NDSMEM2dicJDb7xHjcxVGGz2xgzXeWGmRC",
+    "risk": {
+      "score": 7.33,
+      "level": "medium",
+      "resource_name": "default",
+      "resource_category": "unknown"
+    },
+    "created_at": "2020-10-31T10:46:14+00:00"
+  }
+}

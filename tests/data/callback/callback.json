@@ -1,0 +1,32 @@
+{
+  "data": {
+    "id": "d117218e-eaac-43fc-a2cb-8ea455a56551",
+    "custom_id": "1",
+    "status": "complete",
+    "status_context": null,
+    "address": "2Cw2haen2uCtp22TZhtJsL6eNHN5GJMb4V",
+    "uri": "bitcoin:2Cw2haen2uCtp22TZhtJsL6eNHN5GJMb4V?amount=0.01482551",
+    "price_amount": "0.01482551",
+    "price_currency": "BTC",
+    "pay_amount": "0.01482551",
+    "pay_currency": "BTC",
+    "fee": "0.00014826",
+    "fee_currency": "BTC",
+    "paid_amount": "0.0",
+    "transactions": [
+      {
+        "txid": "06bbc4aaa73945bd9a874c8b3f217b0c28633f569edd2c12d6ee741b2b5a2435f"
+      },
+      {
+        "txid": "092bb0759937aaa0b9f5c4af49e23ed818e97f0310a7ccb36a257a53611f0b3e"
+      }
+    ],
+    "name": "Test",
+    "description": "#1",
+    "metadata": null,
+    "success_redirect_url": null,
+    "hosted_page_url": "https://hosted-business-sandbox.cryptopay.me/invoices/d207218e-eaac-43fc-a2cb-8ea455a56551",
+    "created_at": "2020-04-02T12:51:19+00:00",
+    "expires_at": "2020-04-02T14:51:19+00:00"
+  }
+}

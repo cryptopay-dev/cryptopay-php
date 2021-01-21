@@ -1,0 +1,16 @@
+{
+  "data": {
+    "id": "69767fab-9936-4788-a578-2b8b20d8b1f4",
+    "status": "enabled",
+    "name": "TestChannel",
+    "description": "#1Channel",
+    "receiver_currency": "BTC",
+    "pay_currency": "BTC",
+    "address": "2N7U1gy7fPXcfZ9vWxmqvyFMQHf9zAzMcdT",
+    "project_id": "d32260cd-a245-4493-896a-d0c5a13824c8",
+    "custom_id": "1",
+    "customer_id": null,
+    "uri": "bitcoin:2N7U1gy7fPXcfZ9vWxmqvyFMQHf9zAzMcdT",
+    "hosted_page_url": "https://hosted-business-sandbox.cryptopay.me/channels/69767fab-9936-4788-a578-2b8b20d8b1f4"
+  }
+}

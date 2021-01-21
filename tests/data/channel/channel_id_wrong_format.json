@@ -1,0 +1,17 @@
+{
+  "error": {
+    "code": "invalid",
+    "message": "invalid",
+    "details": [
+      {
+        "code": "must_be_uuid",
+        "target": "channel_id",
+        "message": "must match uuid format",
+        "args": {}
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "e82ff946c507e189c9605b2e859e7bd7"
+  }
+}
