@@ -1,4 +1,5 @@
 <?php
+
 use Cryptopay\Exceptions\CryptopayException;
 
 require_once dirname(__DIR__) . '/Init.php';
