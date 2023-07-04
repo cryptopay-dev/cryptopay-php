@@ -18,7 +18,7 @@ The official PHP library for Cryptopay API.
 <a name="versions"></a>
 ### VERSIONS ###
 
-Client works with PHP version 7.3 or higher and depends on:
+Client works with PHP version 7.4 or higher and depends on:
 * "guzzlehttp/guzzle": 7.2 or higher
 * "vlucas/phpdotenv": "5.2" or higher
 * "squizlabs/php_codesniffer": 3.5 or higher

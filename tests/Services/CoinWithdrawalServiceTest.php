@@ -10,7 +10,6 @@ use Cryptopay\Service\CoinWithdrawalService;
 
 class CoinWithdrawalServiceTest extends BaseTest
 {
-
     public function testCantCreateCoinWithdrawalWithDuplicatedCustomId()
     {
         $message = $this->getJsonFile('/data/common/duplicate_custom_id.json');

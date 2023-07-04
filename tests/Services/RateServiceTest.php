@@ -62,5 +62,4 @@ class RateServiceTest extends BaseTest
             CurrenciesConstants::CURRENCY_BTC . CurrenciesConstants::CURRENCY_BTC
         );
     }
-
 }

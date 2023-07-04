@@ -1,0 +1,6 @@
+# Ignore composer files
+/vendor/
+composer.lock
+
+# Ignore PHUnit caches
+.phpunit.result.cache
