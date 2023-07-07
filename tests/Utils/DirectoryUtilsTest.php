@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 class DirectoryUtilsTest extends TestCase
 {
-
     public function testSearchParentFolderWillStopAfterStepsAndThrowException()
     {
         $currentDirectory = '/dir1/dir2/dir3/dir4/dir5/dir6/dir7';
