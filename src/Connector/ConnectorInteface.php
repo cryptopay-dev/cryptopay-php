@@ -5,7 +5,7 @@ namespace Cryptopay\Connector;
 use Cryptopay\Exceptions\RequestException;
 use Psr\Http\Message\ResponseInterface;
 
-interface ConnectorInteface
+interface ConnectorInterface
 {
     /**
      * @param string $method

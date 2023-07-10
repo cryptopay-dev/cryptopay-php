@@ -11,7 +11,7 @@ use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
 use Cryptopay\Exceptions\RequestException;
 
-abstract class AbstractConnector implements ConnectorInteface
+abstract class AbstractConnector implements ConnectorInterface
 {
     protected ConfigInterface $config;
 

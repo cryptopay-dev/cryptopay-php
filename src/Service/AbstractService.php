@@ -3,14 +3,14 @@
 namespace Cryptopay\Service;
 
 use Cryptopay\AbstractResponse;
-use Cryptopay\Connector\ConnectorInteface;
+use Cryptopay\Connector\ConnectorInterface;
 use Cryptopay\Exceptions\UuidException;
 
 abstract class AbstractService
 {
-    protected ConnectorInteface $connector;
+    protected ConnectorInterface $connector;
 
-    public function __construct(ConnectorInteface $connector)
+    public function __construct(ConnectorInterface $connector)
     {
         $this->connector = $connector;
     }

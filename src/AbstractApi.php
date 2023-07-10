@@ -2,20 +2,20 @@
 
 namespace Cryptopay;
 
-use Cryptopay\Connector\ConnectorInteface;
+use Cryptopay\Connector\ConnectorInterface;
 
 abstract class AbstractApi
 {
 
     /**
-     * @var \Cryptopay\Connector\ConnectorInteface
+     * @var \Cryptopay\Connector\ConnectorInterface
      */
     private $connector;
 
     /**
-     * @param \Cryptopay\Connector\ConnectorInteface $connector
+     * @param \Cryptopay\Connector\ConnectorInterface $connector
      */
-    public function __construct(ConnectorInteface $connector)
+    public function __construct(ConnectorInterface $connector)
     {
         $this->connector = $connector;
     }
