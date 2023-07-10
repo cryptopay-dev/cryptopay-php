@@ -153,7 +153,9 @@ DirectoryException      | 422
     $cryptopay = new Cryptopay($config);
 
     try {
-        $response = $cryptopay->getInvoices('366fcd88-2d90-47b3-bdfb-5d3e3e8d8550');
+        $response = $cryptopay->invoices->all([
+            'starting_after' => '366fcd88-2d90-47b3-bdfb-5d3e3e8d8550'
+        ]);
     } catch (CryptopayException $e) {
         echo sprintf("Cant get invoices list. Error: %s \n", $exception->getMessage());
         die();
