@@ -7,8 +7,8 @@ use Cryptopay\Config\Config;
 use Cryptopay\Cryptopay;
 
 $config = (new Config())
-    ->withApiKey('API_KEY_VALUE')
-    ->withApiSecret('YOUR_SECRET_VALUE')
+    ->withApiKey(getenv('CRYPTOPAY_API_KEY'))
+    ->withApiSecret(getenv('CRYPTOPAY_API_SECRET'))
     ->withBaseUrl('https://business-sandbox.cryptopay.me')
     ->withCallbackSecret('YOUR_CALLBACK_SECRET_VALUE')
     ->withTimeout(10);

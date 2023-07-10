@@ -20,7 +20,7 @@ abstract class AbstractApi
         $this->connector = $connector;
     }
 
-    protected function request(string $method, $string path, array $params = null) {
+    protected function request(string $method, string $path, array $params = null) {
       return $this->connector->request($method, $path, $params);
     }
 }
