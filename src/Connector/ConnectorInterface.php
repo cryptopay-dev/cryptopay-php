@@ -10,11 +10,11 @@ interface ConnectorInterface
     /**
      * @param string $method
      * @param string $path
-     * @param array $params
+     * @param null|array $params
      * @return object
      * @throws RequestException
      */
-    public function request(string $method, string $path, array $params = []): object;
+    public function request(string $method, string $path, array $params = null): object;
 
     /**
      * @param ResponseInterface $response

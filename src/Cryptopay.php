@@ -19,7 +19,6 @@ use Cryptopay\Service\RateService;
 use Cryptopay\Exceptions\RequestException;
 use Cryptopay\Service\RiskService;
 use Cryptopay\Service\TransactionService;
-
 use Cryptopay\Api\AccountsApi;
 use Cryptopay\Api\ChannelsApi;
 use Cryptopay\Api\CoinWithdrawalsApi;

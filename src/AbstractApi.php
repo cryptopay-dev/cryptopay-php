@@ -6,7 +6,6 @@ use Cryptopay\Connector\ConnectorInterface;
 
 abstract class AbstractApi
 {
-
     /**
      * @var \Cryptopay\Connector\ConnectorInterface
      */
@@ -20,7 +19,8 @@ abstract class AbstractApi
         $this->connector = $connector;
     }
 
-    protected function request(string $method, string $path, array $params = null) {
-      return $this->connector->request($method, $path, $params);
+    protected function request(string $method, string $path, array $params = null)
+    {
+        return $this->connector->request($method, $path, $params);
     }
 }
