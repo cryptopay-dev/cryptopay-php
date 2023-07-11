@@ -1,197 +1,486 @@
-# Cryptopay API #
+# Cryptopay PHP Library
 
-The official PHP library for Cryptopay API.
+The official PHP library for the Cryptopay API.
 
-### Table of Сontents ###
+Cryptopay is a payment gateway and business wallet that allows merchants to automate the processes of accepting cryptocurrency payments and payouts from their customers, as well as making currency exchange transactions and receiving data on the transaction history and account balance statuses for reporting.
 
-* [Versions](#versions)
-* [Documentation](#documentation)
-* [Setup](#setup)
-* [Request / Response](#request--response)
-* [Exception](#exceptions)
+For more information, please visit [Cryptopay API docs](https://developers.cryptopay.me).
+
+# Table of contents
+
+* [Installation](#installation)
+* [Configuration](#configuration)
 * [Usage](#usage)
-* [Examples](#examples)
-* [Webhooks](#webhooks)
-* [Testing and Contributing](#testing)
+   * [Accounts](#accountsapi)
+   * [Channels](#channelsapi)
+   * [CoinWithdrawals](#coinwithdrawalsapi)
+   * [Coins](#coinsapi)
+   * [Customers](#customersapi)
+   * [ExchangeTransfers](#exchangetransfersapi)
+   * [Invoices](#invoicesapi)
+   * [Rates](#ratesapi)
+   * [Risks](#risksapi)
+   * [Transactions](#transactionsapi)
+* [Callbacks](#callbacks)
+
+# Installation
+
+## Requirements
+
+* PHP 7.4+
+
+## Composer
+
+You can install the library via [Composer](https://getcomposer.org). Run the following command:
+
+```
+composer require cryptopay-dev/cryptopay
+```
+
+To use the library, use Composer's autoload:
+
+```php
+require_once 'vendor/autoload.php';
+```
+
+# Configuration
+
+## Create API credentials
+
+Learn mode about API credentials at [Developers guide](https://developers.cryptopay.me/guides/api-credentials).
+
+## Configure library
+
+```php
+require_once 'vendor/autoload.php';
+
+use Cryptopay\Config\Config;
+use Cryptopay\Cryptopay;
+
+$config = (new Config())
+    ->withApiKey('API_KEY_VALUE')
+    ->withApiSecret('YOUR_SECRET_VALUE')
+    ->withBaseUrl('https://business-sandbox.cryptopay.me')
+    ->withCallbackSecret('YOUR_CALLBACK_SECRET_VALUE')
+    ->withTimeout(10);
+
+$cryptopay = new Cryptopay($config);
+```
+
+Example: [examples/Init.php](https://github.com/cryptopay-dev/cryptopay-php/blob/master/examples/Init.php)
+
+# Usage
+
+## Accounts
 
 
-<a name="versions"></a>
-### VERSIONS ###
+### List accounts
 
-Client works with PHP version 7.4 or higher and depends on:
-* "guzzlehttp/guzzle": 7.2 or higher
-* "vlucas/phpdotenv": "5.2" or higher
-* "squizlabs/php_codesniffer": 3.5 or higher
 
-<a name="documentation"></a>
-### Documentation ###
-For more details visit [CryptopayAPI](https://developers.cryptopay.me)
+```php
+$result = $cryptopay->accounts->all();
+```
 
-To start using this library, register an account on
-    [Cryptopay Sandbox](https://business-sandbox.cryptopay.me/)
-    [Guide](https://developers.cryptopay.me/guides/creating-a-test-account)
-or
-    [Cryptopay Live](https://business.cryptopay.me/)
+### List account transactions
 
-You should have the following 3 parameters:
-~~~~
-ApiKey, ApiSecret, CallbackApiSecret
-~~~~
 
-<a name="setup"></a>
-### Setup ###
+```php
+$accountId = '31804390-d44e-49e9-8698-ca781e0eb806';
 
-1. Make sure you have [composer](https://getcomposer.org/download/) installed
+$result = $cryptopay->accounts->allTransactions($accountId);
+```
 
-2. Go to project folder<br/>
-    cd ~/projects/your_project_name
+## Channels
 
-3. Run composer require  "cryptopay-dev/cryptopay"
+A channel is a static cryptocurrency address that may be assigned to each one of your customers.
 
-    (3) Or you can add it manually.
+[Channels API docs](https://developers.cryptopay.me/guides/channels)
 
-    Open your composer.json file and add a line in the end of "require" section<br/>
+### List channels
 
-        "require": {
-            ...,
-            "cryptopay-dev/cryptopay": "master"
-        },
 
-4. After the package is successful installed, you need to configure it.
+```php
+$result = $cryptopay->channels->all();
+```
 
-    If you use a PHP framework such as Laravel, composer packages will be included automatically.
-    Otherwise, you need to require a path to "vendor/autoload.php" in a file that your code is located.
+### Create a channel
 
-    After that initialize the package with the following parameters:
 
-        $config = (new Config())
-            ->withApiKey('API_KEY_VALUE')
-            ->withApiSecret('YOUR_SECRET_VALUE')
-            ->withBaseUrl('https://business-sandbox.cryptopay.me')
-            ->withCallbackSecret('YOUR_CALLBACK_SECRET_VALUE')
-            ->withTimeout(10);
+```php
+$params = [
+  'name' => 'Channel name',
+  'pay_currency' => 'BTC',
+  'receiver_currency' => 'EUR'
+];
 
-        $cryptopay = new Cryptopay($config);
+$result = $cryptopay->channels->create($params);
+```
 
-    You can also pass: baseUrl, CallbackApiSecret, timeout values.
+### List channel payments
 
-    Example: [examples/Init.php](https://github.com/cryptopay-dev/cryptopay-php/blob/master/examples/Init.php)
 
-    Well done - you're good to go.
+```php
+$channelId = '15d0bb11-1e9f-4295-bec5-abd9d5a906a1';
 
-5. Alternatively, you can use a .env file with parameters to configure it.
+$result = $cryptopay->channels->allPayments($channelId);
+```
 
-    To do so, you should omit initialization in Step 4.
+### Retrieve a channel
 
-    Create a new "config" folder in the Project folder. If the "config" folder already exists, open it and create a new 'cryptopay.env' file.
 
-    The structure of config/cryptopay.env:
+```php
+$channelId = '15d0bb11-1e9f-4295-bec5-abd9d5a906a1';
 
-        CRYPTOPAY_API_KEY=API_KEY_VALUE
-        CRYPTOPAY_API_SECRET=YOUR_SECRET_VALUE
-        CRYPTOPAY_BASE_URL=https://business-sandbox.cryptopay.me
-        CRYPTOPAY_TIMEOUT=10
-        CRYPTOPAY_CALLBACK_SECRET=YOUR_CALLBACK_SECRET_VALUE
+$result = $cryptopay->channels->retrieve($channelId);
+```
 
-    Then init Cryptopay library in your project:
+### Retrieve a channel by custom id
 
-        $config = (new ConfigEnv())->init();
-        $cryptopay = new Cryptopay($config);
 
-    Example: [examples/InitWithEnv.php](https://github.com/cryptopay-dev/cryptopay-php/blob/master/examples/InitWithEnv.php)
+```php
+$customId = 'CHANNEL-123';
 
-<a name="request--response"></a>
-### Request / Response ###
-All requests are signed with [Authorization](https://developers.cryptopay.me/guides/api-basics/authentication)
-algorythm and then sent to the API through GuzzleClient.
+$result = $cryptopay->channels->retrieveByCustomId($customId);
+```
 
-By default, Cryptopay API returns JSON response. This package transforms json response to object and return it to the client.
+### Retrieve a channel payment
 
-<a name="exceptions"></a>
-### Exceptions ###
-Exception Structure
-~~~~
-\Exception
-    \Cryptopay\CryptopayException
-        \Cryptopay\Exceptions\ConfigException
-        \Cryptopay\Exceptions\CallbackExceptions
-        \Cryptopay\Exceptions\ForbiddenException
-        \Cryptopay\Exceptions\RequestException
-        \Cryptopay\Exceptions\UuidException
-        \Cryptopay\Exceptions\DirectoryException
-~~~~
 
-Exception class         | Response Code
------------------------ | -------------
-RequestException        | *
-ConfigException         | 422
-CallbackException       | 422
-ForbiddenException      | 403
-UuidException           | 422
-DirectoryException      | 422
+```php
+$channelId = '15d0bb11-1e9f-4295-bec5-abd9d5a906a1';
+$channelPaymentId = '704291ec-0b90-4118-89aa-0c9681c3213c';
 
-<a name="usage"></a>
-### Usage ###
+$result = $cryptopay->channels->retrievePayment($channelId, $channelPaymentId);
+```
 
-~~~
-<?php
+### Update a channel
 
-    // path to autoload
-    require_once dirname(__DIR__) . "/vendor/autoload.php";
 
-    use Cryptopay\Config\Config;
-    use Cryptopay\Cryptopay;
+```php
+$channelId = '15d0bb11-1e9f-4295-bec5-abd9d5a906a1';
+$params = ['status' => 'disabled'];
 
-    //Configuration for Cryptopay
-    $config = (new Config())
-        ->withApiKey('API_KEY_VALUE')
-        ->withApiSecret('YOUR_SECRET_VALUE')
-        ->withBaseUrl('https://business-sandbox.cryptopay.me')
-        ->withCallbackSecret('YOUR_CALLBACK_SECRET_VALUE')
-        ->withTimeout(10);
+$result = $cryptopay->channels->update($channelId, $params);
+```
 
-    $cryptopay = new Cryptopay($config);
+## CoinWithdrawals
 
-    try {
-        $response = $cryptopay->invoices->all([
-            'starting_after' => '366fcd88-2d90-47b3-bdfb-5d3e3e8d8550'
-        ]);
-    } catch (CryptopayException $e) {
-        echo sprintf("Cant get invoices list. Error: %s \n", $exception->getMessage());
-        die();
-    }
-    print_r($response);
-~~~
+In addition to accepting payments through the Cryptopay payment gateway, it is also possible to make payments to your customers in any of the cryptocurrency currently supported by Cryptopay. In Cryptopay, these payments are called “Coin Withdrawal”. The process of requesting coin withdrawal is almost the same for a customer in Cashier as the process of making a deposit with one exception - the customer will need to specify the address of the wallet he wants to send the cryptocurrency to.
 
-<a name="examples"></a>
-### Examples ###
+[Coin withdrawals API docs](https://developers.cryptopay.me/guides/payouts)
 
-You can find more examples in `examples` folder.
+### List withdrawals
 
-<a name="callbacks"></a>
-### Callbacks ###
+
+```php
+$result = $cryptopay->coinWithdrawals->all();
+```
+
+### Commit a withdrawal
+
+
+```php
+$coinWithdrawal = $cryptopay->coinWithdrawals->create([
+  'address' => '2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ',
+  'charged_amount' => '100.0',
+  'charged_currency' => 'EUR',
+  'received_currency' => 'BTC',
+  'force_commit' => false
+])->data;
+
+$result = $cryptopay->coinWithdrawals->commit($coinWithdrawal->id);
+```
+
+### Create a withdrawal
+
+[Documentation](https://developers.cryptopay.me/guides/payouts/create-a-coin-withdrawal)
+
+```php
+$params = [
+  'address' => '2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ',
+  'charged_amount' => '100.0',
+  'charged_currency' => 'EUR',
+  'received_currency' => 'BTC',
+  'force_commit' => true
+];
+
+$result = $cryptopay->coinWithdrawals->create($params);
+```
+
+### List network fees
+
+
+```php
+$result = $cryptopay->coinWithdrawals->allNetworkFees();
+```
+
+### Retrieve a withdrawal
+
+
+```php
+$coinWithdrawalId = '3cf9d1c4-6191-4826-8cae-2c717810c7e9';
+
+$result = $cryptopay->coinWithdrawals->retrieve($coinWithdrawalId);
+```
+
+### Retrieve a withdrawal by custom id
+
+
+```php
+$customId = 'PAYMENT-123';
+
+$result = $cryptopay->coinWithdrawals->retrieveByCustomId($customId);
+```
+
+## Coins
+
+
+### List supported coins
+
+
+```php
+$result = $cryptopay->coins->all();
+```
+
+## Customers
+
+Customer objects allow you to reject High-Risk transactions automatically, and to track multiple transactions, that are associated with the same customer.
+
+
+### List customers
+
+
+```php
+$result = $cryptopay->customers->all();
+```
+
+### Create a customer
+
+
+```php
+$params = [
+  'id' => '56c8cb4112bc7df178ae804fa75f712b',
+  'currency' => 'EUR'
+];
+
+$result = $cryptopay->customers->create($params);
+```
+
+### Retrieve a customer
+
+
+```php
+$customerId = "CUSTOMER-123";
+
+$result = $cryptopay->customers->retrieve($customerId);
+```
+
+### Update a customer
+
+
+```php
+$customerId = 'CUSTOMER-123';
+$params = [
+  'addresses' => [
+    [
+      'address' => '2N9wPGx67zdSeAbXi15qHgoZ9Hb9Uxhd2uQ',
+      'currency' => 'BTC',
+      'network' => 'bitcoin'
+    ]
+  ]
+];
+
+$result = $cryptopay->customers->update($customerId, $params);
+```
+
+## ExchangeTransfers
+
+
+### Commit an exchange transfer
+
+
+```php
+$exchangeTransfer = $cryptopay->exchangeTransfers->create([
+  'charged_currency' => 'EUR',
+  'charged_amount' => '100.0',
+  'received_currency' => 'BTC',
+  'received_amount' => null,
+  'force_commit' => false
+])->data;
+
+$result = $cryptopay->exchangeTransfers->commit($exchangeTransfer->id);
+```
+
+### Create an exchange transfer
+
+
+```php
+$params = [
+  'charged_currency' => 'EUR',
+  'charged_amount' => '100.0',
+  'received_currency' => 'BTC',
+  'received_amount' => null,
+  'force_commit' => true
+];
+
+$result = $cryptopay->exchangeTransfers->create($params);
+```
+
+### Retrieve an exchange transfer
+
+
+```php
+$exchangeTransferId = '2c090f99-7cc1-40da-9bca-7caa57b4ebfb';
+
+$result = $cryptopay->exchangeTransfers->retrieve($exchangeTransferId);
+```
+
+## Invoices
+
+An invoice is a request for a cryptocurrency payment which contains a unique BTC, LTC, ETH or XRP address and the amount that has to be paid while the invoice is valid.
+
+[Invoices API docs](https://developers.cryptopay.me/guides/invoices)
+
+### List invoices
+
+
+```php
+$result = $cryptopay->invoices->all();
+```
+
+### Commit invoice recalculation
+
+
+```php
+$invoiceId = '8dd53e0f-0725-48b4-b0a7-1840aa67b5bb';
+$recalculation = $cryptopay->invoices->createRecalculation($invoiceId)->data;
+
+$result = $cryptopay->invoices->commitRecalculation($invoiceId, $recalculation->id);
+```
+
+### Create an invoice
+
+
+```php
+$params = [
+  'price_amount' => '100.0',
+  'price_currency' => 'EUR',
+  'pay_currency' => 'BTC'
+];
+
+$result = $cryptopay->invoices->create($params);
+```
+
+### Create invoice recalculation
+
+
+```php
+$invoiceId = '29a563ad-b417-445c-b8f6-b6c806bb039b';
+$params = ['force_commit' => true];
+
+$result = $cryptopay->invoices->createRecalculation($invoiceId, $params);
+```
+
+### Create invoice refund
+
+
+```php
+$invoiceId = '331646a6-c8b5-430d-adfb-021d11ff6cd0';
+$params = ['address' => '0xf3532c1fd002665ec54d46a50787e0c69c76cd44'];
+
+$result = $cryptopay->invoices->createRefund($invoiceId, $params);
+```
+
+### List invoice refunds
+
+
+```php
+$invoiceId = '7e274430-e20f-4321-8748-20824287ae44';
+
+$result = $cryptopay->invoices->allRefunds($invoiceId);
+```
+
+### Retrieve an invoice
+
+
+```php
+$invoiceId = 'c8233d57-78c8-4c36-b35e-940ae9067c78';
+
+$result = $cryptopay->invoices->retrieve($invoiceId);
+```
+
+### Retrieve an invoice by custom_id
+
+
+```php
+$customId = 'PAYMENT-123';
+
+$result = $cryptopay->invoices->retrieveByCustomId($customId);
+```
+
+## Rates
+
+
+### Retrieve all rates
+
+
+```php
+$result = $cryptopay->rates->all();
+```
+
+### Retrieve a pair rate
+
+
+```php
+$result = $cryptopay->rates->retrieve('BTC', 'EUR');
+```
+
+## Risks
+
+[Risks API docs](https://developers.cryptopay.me/guides/risks)
+
+### Score a coin address
+
+
+```php
+$params = [
+  'address' => '2N9wPGx67zdSeAbXi15qHgoZ9Hb9Uxhd2uQ',
+  'currency' => 'BTC',
+  'type' => 'source_of_funds'
+];
+
+$result = $cryptopay->risks->score($params);
+```
+
+## Transactions
+
+[Transactions API docs](https://developers.cryptopay.me/guides/transactions)
+
+### List transactions
+
+
+```php
+$result = $cryptopay->transactions->all();
+```
+
+
+# Callbacks
 
 [Documentation](https://developers.cryptopay.me/guides/api-basics/callbacks)
 
-All callbacks need to be validated with
-[signature](https://developers.cryptopay.me/guides/api-basics/authentication/signature)
+All callbacks needs to be validated with [signature](https://developers.cryptopay.me/guides/api-basics/authentication/signature)
 
-    <?php
-        //....Initialization
-        // get CallbackJson
-        $callbackJson = file_get_contents('php://input');
+```php
 
-        // Get headers
-        $headers = getallheaders();
+<?php
 
-        $cryptopay->validateCallback($callbackJson, $headers);
-    ?>
+// Get CallbackJson
+$callbackJson = file_get_contents('php://input');
 
-If the signature is wrong, the package validation will throw ForbiddenException.
-Otherwise, it will return object
+// Get headers
+$headers = getallheaders();
 
-<a name="testing"></a>
-### Testing ###
-To run test type in terminal
+$cryptopay->validateCallback($callbackJson, $headers);
+```
 
-<code>composer test</code>
+If the signature is wrong, the package validation will throw ForbiddenException. Otherwise, it will return object.
