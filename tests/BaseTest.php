@@ -13,8 +13,6 @@ use GuzzleHttp\Psr7\Response;
 
 abstract class BaseTest extends TestCase
 {
-    private string $apiKey = '';
-    private string $apiSecret = '';
     private string $baseUrl = 'https://business-sandbox.cryptopay.me';
     private int $timeout = 10;
 
@@ -25,8 +23,8 @@ abstract class BaseTest extends TestCase
     public function __construct(?string $name = null, array $data = [], $dataName = '')
     {
         $this->config = (new Config())
-            ->withApiKey($this->apiKey)
-            ->withApiSecret($this->apiSecret)
+            ->withApiKey(getenv('CRYPTOPAY_API_KEY'))
+            ->withApiSecret(getenv('CRYPTOPAY_API_SECRET'))
             ->withBaseUrl($this->baseUrl)
             ->withTimeout($this->timeout);
 

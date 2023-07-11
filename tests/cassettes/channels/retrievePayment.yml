@@ -1,0 +1,73 @@
+
+-
+    request:
+        method: GET
+        url: 'https://business-sandbox.cryptopay.me/api/channels/15d0bb11-1e9f-4295-bec5-abd9d5a906a1/payments/704291ec-0b90-4118-89aa-0c9681c3213c'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 09:02:58 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:kReNrMlPmX/m2/+l//MgTDCS7rg='
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 11 Jul 2023 09:02:59 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fdee55de20e58-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":{"id":"704291ec-0b90-4118-89aa-0c9681c3213c","paid_amount":"0.00184519","paid_currency":"BTC","received_amount":"104.47","received_currency":"EUR","fee":"1.06","fee_currency":"EUR","txid":"4a46a2071635b6c504b72e6ecad8229e4c2efb1b2b10ac05da72b9c306ac36a2","exchange":{"pair":"BTCEUR","rate":"57192.7353","fee":"0.0","fee_currency":"EUR"},"status":"completed","status_context":null,"refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":{"score":3.78,"level":"medium","resource_name":"default","resource_category":"unknown"},"created_at":"2021-10-18T07:09:54+00:00"}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/channels/15d0bb11-1e9f-4295-bec5-abd9d5a906a1/payments/704291ec-0b90-4118-89aa-0c9681c3213c'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 320
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.552453
+            namelookup_time: 0.004832
+            connect_time: 0.146976
+            pretransfer_time: 0.349619
+            size_upload: 0.0
+            size_download: 729.0
+            speed_download: 1320.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.552416
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 60618
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 349556
+            connect_time_us: 146976
+            namelookup_time_us: 4832
+            pretransfer_time_us: 349619
+            redirect_time_us: 0
+            starttransfer_time_us: 552416
+            total_time_us: 552453
+    index: 0

@@ -1,0 +1,73 @@
+
+-
+    request:
+        method: GET
+        url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals/3cf9d1c4-6191-4826-8cae-2c717810c7e9'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 08:56:21 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:lbuniTrwfSPcoTBHJ6FcKEKFNTw='
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 11 Jul 2023 08:56:22 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fd5327c8bb8d2-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":{"id":"3cf9d1c4-6191-4826-8cae-2c717810c7e9","custom_id":null,"customer_id":null,"address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","txid":"31114ad287628c2a462f6cbce89035460a56af156b14b396165f26151dd8c762","status":"completed","charged_amount":"100.0","charged_currency":"EUR","received_amount":"0.00184519","received_currency":"BTC","network_fee":"0.00000216","network_fee_level":"average","fee":"0.0","fee_currency":"BTC","description":null,"exchange":{"pair":"BTCEUR","rate":"53590.0452","fee":"1.0","fee_currency":"EUR"},"risk":{"score":5.73,"level":"high","resource_name":"default","resource_category":"unknown"},"created_at":"2021-10-18T06:48:04+00:00"}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals/3cf9d1c4-6191-4826-8cae-2c717810c7e9'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 282
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.567412
+            namelookup_time: 0.004792
+            connect_time: 0.121166
+            pretransfer_time: 0.318868
+            size_upload: 0.0
+            size_download: 685.0
+            speed_download: 1208.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.567367
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 57136
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 318811
+            connect_time_us: 121166
+            namelookup_time_us: 4792
+            pretransfer_time_us: 318868
+            redirect_time_us: 0
+            starttransfer_time_us: 567367
+            total_time_us: 567412
+    index: 0

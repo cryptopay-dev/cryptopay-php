@@ -1,0 +1,73 @@
+
+-
+    request:
+        method: GET
+        url: 'https://business-sandbox.cryptopay.me/api/channels/15d0bb11-1e9f-4295-bec5-abd9d5a906a1/payments'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 09:02:57 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:PANDehQdPXSccSq05u6Mroqm0qs='
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 11 Jul 2023 09:02:57 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fdedbde4d0b63-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":[{"id":"9ae0624b-8c64-49c8-a388-76ecdb9979fc","paid_amount":"0.00331433","paid_currency":"BTC","received_amount":"0.0","received_currency":"EUR","fee":"0.0","fee_currency":"EUR","txid":"71e2ba2d1689456659e6064ed0a25d4de610bf91d30d1c0d50dfc624876a91ee","status":"on_hold","status_context":"channel_disabled","refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":null,"created_at":"2023-07-11T09:01:26+00:00"},{"id":"1f87483d-8dbc-4052-9066-ac6543047f8b","paid_amount":"0.00331433","paid_currency":"BTC","received_amount":"0.0","received_currency":"EUR","fee":"0.0","fee_currency":"EUR","txid":"4eb4f5d0ef88966b7c2b4bb1e1318ebc43d5679c4e7bae125fbfc02b3f2432f7","status":"on_hold","status_context":"channel_disabled","refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":null,"created_at":"2023-07-11T08:56:30+00:00"},{"id":"58b305a9-4682-4c16-bd77-a8427a6cc7e2","paid_amount":"0.00523078","paid_currency":"BTC","received_amount":"0.0","received_currency":"EUR","fee":"0.0","fee_currency":"EUR","txid":"de91aa36ba106c7901d1bda23f0370906d2f268036f5e578e8e4f21c47b4f4da","status":"on_hold","status_context":"channel_disabled","refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":{"score":0.0,"level":"low","resource_name":"default","resource_category":"unknown"},"created_at":"2022-09-19T09:23:36+00:00"},{"id":"704291ec-0b90-4118-89aa-0c9681c3213c","paid_amount":"0.00184519","paid_currency":"BTC","received_amount":"104.47","received_currency":"EUR","fee":"1.06","fee_currency":"EUR","txid":"4a46a2071635b6c504b72e6ecad8229e4c2efb1b2b10ac05da72b9c306ac36a2","exchange":{"pair":"BTCEUR","rate":"57192.7353","fee":"0.0","fee_currency":"EUR"},"status":"completed","status_context":null,"refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":{"score":3.78,"level":"medium","resource_name":"default","resource_category":"unknown"},"created_at":"2021-10-18T07:09:54+00:00"},{"id":"839ed785-07e5-4b58-b235-2cbac6ece9e1","paid_amount":"0.00184519","paid_currency":"BTC","received_amount":"104.77","received_currency":"EUR","fee":"1.06","fee_currency":"EUR","txid":"bf2690d53564e6b1fa510ecddf7472d6e6c679fd9a22d82d198d8d4b88f78448","exchange":{"pair":"BTCEUR","rate":"57356.375","fee":"0.0","fee_currency":"EUR"},"status":"completed","status_context":null,"refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":{"score":7.25,"level":"medium","resource_name":"default","resource_category":"unknown"},"created_at":"2021-10-18T07:09:54+00:00"},{"id":"d93bd627-f825-4ff5-bc3f-64f1fc572e86","paid_amount":"0.00184519","paid_currency":"BTC","received_amount":"0.0","received_currency":"EUR","fee":"0.0","fee_currency":"EUR","txid":"91b56ef2164ae37e95ce82723ff46c83a3e211b1a2cd1afcc21bee8f6c663d64","status":"on_hold","status_context":"illicit_resource","refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":{"score":4.96,"level":"high","resource_name":"default","resource_category":"unknown"},"created_at":"2021-10-18T06:49:39+00:00"},{"id":"6ceb11a5-22e9-43d7-9809-36ca70ae88e5","paid_amount":"0.00184519","paid_currency":"BTC","received_amount":"104.47","received_currency":"EUR","fee":"1.06","fee_currency":"EUR","txid":"31114ad287628c2a462f6cbce89035460a56af156b14b396165f26151dd8c762","exchange":{"pair":"BTCEUR","rate":"57192.7353","fee":"0.0","fee_currency":"EUR"},"status":"completed","status_context":null,"refund_address":null,"coin_withdrawal_id":null,"custom_id":null,"customer_id":null,"channel_id":"15d0bb11-1e9f-4295-bec5-abd9d5a906a1","address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","risk":{"score":7.19,"level":"low","resource_name":"default","resource_category":"unknown"},"created_at":"2021-10-18T06:48:30+00:00"}],"meta":{"total":7,"has_more":false}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/channels/15d0bb11-1e9f-4295-bec5-abd9d5a906a1/payments'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 283
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.499889
+            namelookup_time: 0.005067
+            connect_time: 0.077706
+            pretransfer_time: 0.223674
+            size_upload: 0.0
+            size_download: 4621.0
+            speed_download: 9260.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.45615
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 60588
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 223586
+            connect_time_us: 77706
+            namelookup_time_us: 5067
+            pretransfer_time_us: 223674
+            redirect_time_us: 0
+            starttransfer_time_us: 456150
+            total_time_us: 499889
+    index: 0

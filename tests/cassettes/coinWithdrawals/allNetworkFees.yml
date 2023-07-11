@@ -1,0 +1,73 @@
+
+-
+    request:
+        method: GET
+        url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals/network_fees'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 08:56:20 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:OvIZpoWqXNBLtJOATLP43tSTZB8='
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 11 Jul 2023 08:56:21 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fd52eab4c0bc6-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":[{"level":"fast","fee":"0.00002582","currency":"BTC","network":"bitcoin"},{"level":"average","fee":"0.00001602","currency":"BTC","network":"bitcoin"},{"level":"slow","fee":"0.00001296","currency":"BTC","network":"bitcoin"},{"level":"average","fee":"0.001","currency":"LTC","network":"litecoin"},{"level":"average","fee":"0.000015","currency":"XRP","network":"ripple"},{"level":"average","fee":"0.00037292","currency":"ETH","network":"ethereum"},{"level":"average","fee":"0.0001","currency":"BCH","network":"bitcoin_cash"},{"level":"average","fee":"2.140056","currency":"USDT","network":"ethereum"},{"level":"average","fee":"2.140504","currency":"USDC","network":"ethereum"},{"level":"average","fee":"2.13990292","currency":"DAI","network":"ethereum"},{"level":"average","fee":"283103.0","currency":"SHIB","network":"ethereum"},{"level":"average","fee":"0.1","currency":"XLM","network":"stellar"},{"level":"average","fee":"0.155381","currency":"ADA","network":"cardano"},{"level":"average","fee":"0.00037836","currency":"BNB","network":"bnb_smart_chain"},{"level":"average","fee":"0.34597953","currency":"BUSD","network":"bnb_smart_chain"},{"level":"average","fee":"1.0","currency":"TRX","network":"tron"},{"level":"average","fee":"0.45","currency":"DOGE","network":"dogecoin"},{"level":"average","fee":"0.00001","currency":"SOL","network":"solana"}]}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals/network_fees'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 258
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.676328
+            namelookup_time: 0.10751
+            connect_time: 0.251186
+            pretransfer_time: 0.40055
+            size_upload: 0.0
+            size_download: 1358.0
+            speed_download: 2008.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.676284
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 57130
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 400496
+            connect_time_us: 251186
+            namelookup_time_us: 107510
+            pretransfer_time_us: 400550
+            redirect_time_us: 0
+            starttransfer_time_us: 676284
+            total_time_us: 676328
+    index: 0

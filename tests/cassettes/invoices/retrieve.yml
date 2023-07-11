@@ -1,0 +1,73 @@
+
+-
+    request:
+        method: GET
+        url: 'https://business-sandbox.cryptopay.me/api/invoices/c8233d57-78c8-4c36-b35e-940ae9067c78'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 08:57:59 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:+tpmpQ+G2B0Z3DrYJ3ud0qMxXBU='
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 11 Jul 2023 08:58:00 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fd795cf12b78b-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":{"id":"c8233d57-78c8-4c36-b35e-940ae9067c78","custom_id":null,"customer_id":null,"subscription_id":null,"status":"completed","status_context":null,"address":"0x516cf64763b17893f9defa60e35d6bee26535ef9","network":"ethereum","uri":"ethereum:0x23a2e5f75cdfe03763d929379f5dc3f14f7045cd@5/transfer?address=0x516cf64763b17893f9defa60e35d6bee26535ef9&uint256=0.5e2","price_amount":"0.00005","price_currency":"USDT","pay_amount":"0.00005","pay_currency":"USDT","fee":"0.000001","fee_currency":"USDT","paid_amount":"0.00005","transactions":[{"txid":"0x549ae0eade6c33f087eceb0f2b586486b0442775fe8ab90c56c211e774ce27b1","risk":{"score":7.3,"level":"medium","resource_name":"default","resource_category":"unknown"}}],"name":null,"description":null,"metadata":null,"success_redirect_url":null,"unsuccess_redirect_url":null,"hosted_page_url":"https://hosted-business-sandbox.cryptopay.me/invoices/c8233d57-78c8-4c36-b35e-940ae9067c78","created_at":"2021-06-16T08:20:13+00:00","expires_at":"2021-06-16T10:20:13+00:00"}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/invoices/c8233d57-78c8-4c36-b35e-940ae9067c78'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 274
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.646043
+            namelookup_time: 0.005707
+            connect_time: 0.093911
+            pretransfer_time: 0.24635
+            size_upload: 0.0
+            size_download: 1012.0
+            speed_download: 1566.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.645977
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 60964
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 246278
+            connect_time_us: 93911
+            namelookup_time_us: 5707
+            pretransfer_time_us: 246350
+            redirect_time_us: 0
+            starttransfer_time_us: 645977
+            total_time_us: 646043
+    index: 0
