@@ -3,6 +3,7 @@
 namespace Cryptopay\Connector;
 
 use Cryptopay\Config\ConfigInterface;
+use Cryptopay\Constants\Methods;
 use Exception;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\ClientException;
@@ -17,6 +18,8 @@ abstract class AbstractConnector implements ConnectorInterface
 
     protected GuzzleClient $client;
 
+    protected string $userAgent;
+
     /**
      * @param string $method
      * @param string $path
@@ -26,7 +29,12 @@ abstract class AbstractConnector implements ConnectorInterface
      */
     public function request(string $method, string $path, array $params = null): object
     {
-        $body = $params ? json_encode($params) : '';
+        $body = '';
+        if ($method == Methods::GET) {
+            $path = $params ? $path . '?' . \http_build_query($params) : $path;
+        } else {
+            $body = $params ? json_encode($params) : '';
+        }
 
         try {
             $headers = $this->signRequest($method, $path, $body);
@@ -75,8 +83,9 @@ abstract class AbstractConnector implements ConnectorInterface
 
         return [
             'Content-Type' => $contentType,
-            'date' => $date,
-            'Authorization' => 'HMAC ' . $this->config->getApiKey() . ':' . $signature
+            'Date' => $date,
+            'Authorization' => 'HMAC ' . $this->config->getApiKey() . ':' . $signature,
+            'User-Agent' => $this->userAgent
         ];
     }
 }

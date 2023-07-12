@@ -15,7 +15,7 @@ class RateServiceTest extends BaseTest
     public function testServiceUnavailableShouldReturnRequestException()
     {
         $this->config->withBaseUrl('url_not_exists.ccc');
-        $connector = new Connector($this->config);
+        $connector = new Connector($this->config, 'Cryptopay-PHP/Test');
         $rateService = new RateService($connector);
 
         $this->expectException(RequestException::class);
