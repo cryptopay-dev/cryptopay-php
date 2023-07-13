@@ -1,0 +1,73 @@
+
+-
+    request:
+        method: GET
+        url: 'https://business-sandbox.cryptopay.me/api/coins'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 09:14:34 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:dKinvbQc9tY5rqSdtsFKQoiFOfE='
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 11 Jul 2023 09:14:35 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fefe2cdbe0e60-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":[{"currency":"BTC","name":"Bitcoin","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/BTC.svg","networks":[{"network":"bitcoin","name":"Bitcoin","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"LTC","name":"Litecoin","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/LTC.svg","networks":[{"network":"litecoin","name":"Litecoin","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"BCH","name":"Bitcoin Cash","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/BCH.svg","networks":[{"network":"bitcoin_cash","name":"Bitcoin Cash","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"XRP","name":"XRP","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/XRP.svg","networks":[{"network":"ripple","name":"Ripple","precision":6,"destination_tag":{"required":true,"name":"Destination tag"},"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"ETH","name":"Ethereum","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/ETH.svg","networks":[{"network":"ethereum","name":"Ethereum (ERC20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"USDT","name":"Tether","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/USDT.svg","networks":[{"network":"ethereum","name":"Ethereum (ERC20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"tron","name":"Tron (TRC20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"DAI","name":"Dai","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/DAI.svg","networks":[{"network":"ethereum","name":"Ethereum (ERC20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"USDC","name":"USD Coin","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/USDC.svg","networks":[{"network":"ethereum","name":"Ethereum (ERC20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"tron","name":"Tron (TRC20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"SHIB","name":"Shiba Inu","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/SHIB.svg","networks":[{"network":"ethereum","name":"Ethereum (ERC20)","precision":0,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":0,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"XLM","name":"Stellar Lumens","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/XLM.svg","networks":[{"network":"stellar","name":"Stellar","precision":7,"destination_tag":{"required":false,"name":"Memo ID"},"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":7,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"ADA","name":"Cardano","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/ADA.svg","networks":[{"network":"cardano","name":"Cardano","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"BNB","name":"BNB","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/BNB.svg","networks":[{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"BUSD","name":"Binance USD","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/BUSD.svg","networks":[{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"TRX","name":"TRON","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/TRX.svg","networks":[{"network":"tron","name":"Tron (TRC20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":6,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"DOGE","name":"Dogecoin","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/DOGE.svg","networks":[{"network":"dogecoin","name":"Dogecoin","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":8,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]},{"currency":"SOL","name":"Solana","logo_url":"https://ledger-development.s3.eu-west-1.amazonaws.com/public/currencies/SOL.svg","networks":[{"network":"solana","name":"Solana","precision":9,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}},{"network":"bnb_smart_chain","name":"BNB Smart Chain (BEP20)","precision":9,"destination_tag":null,"invoices":{"enabled":true},"channels":{"enabled":true},"coin_withdrawals":{"enabled":true}}]}]}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/coins'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 234
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.652246
+            namelookup_time: 0.004701
+            connect_time: 0.145305
+            pretransfer_time: 0.294647
+            size_upload: 0.0
+            size_download: 8192.0
+            speed_download: 12564.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.607186
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.40.240
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 52236
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 294534
+            connect_time_us: 145305
+            namelookup_time_us: 4701
+            pretransfer_time_us: 294647
+            redirect_time_us: 0
+            starttransfer_time_us: 607186
+            total_time_us: 652246
+    index: 0

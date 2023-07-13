@@ -11,7 +11,7 @@ use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
 use Cryptopay\Exceptions\RequestException;
 
-abstract class AbstractConnector implements ConnectorInteface
+abstract class AbstractConnector implements ConnectorInterface
 {
     protected ConfigInterface $config;
 
@@ -20,11 +20,11 @@ abstract class AbstractConnector implements ConnectorInteface
     /**
      * @param string $method
      * @param string $path
-     * @param array $params
+     * @param null|array $params
      * @return object
      * @throws RequestException
      */
-    public function request(string $method, string $path, array $params = []): object
+    public function request(string $method, string $path, array $params = null): object
     {
         $body = $params ? json_encode($params) : '';
 

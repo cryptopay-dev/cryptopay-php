@@ -1,0 +1,74 @@
+
+-
+    request:
+        method: POST
+        url: 'https://business-sandbox.cryptopay.me/api/customers'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 09:11:51 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:lX6sU5JKCLrd3JdumgpNqX/w7xI='
+            Accept: ''
+        body: '{"id":"56c8cb4112bc7df178ae804fa75f712b","currency":"EUR"}'
+    response:
+        status:
+            http_version: '1.1'
+            code: '201'
+            message: Created
+        headers:
+            Date: 'Tue, 11 Jul 2023 09:11:51 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4febe36c81b764-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":{"id":"56c8cb4112bc7df178ae804fa75f712b","currency":"EUR","refund_addresses":{},"addresses":[]}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/customers'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 201
+            header_size: 460
+            request_size: 317
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.399036
+            namelookup_time: 0.006163
+            connect_time: 0.058001
+            pretransfer_time: 0.244547
+            size_upload: 58.0
+            size_download: 104.0
+            speed_download: 260.0
+            speed_upload: 145.0
+            download_content_length: -1.0
+            upload_content_length: 58.0
+            starttransfer_time: 0.398991
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.40.240
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 58876
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 244454
+            connect_time_us: 58001
+            namelookup_time_us: 6163
+            pretransfer_time_us: 244547
+            redirect_time_us: 0
+            starttransfer_time_us: 398991
+            total_time_us: 399036
+    index: 0

@@ -1,5 +1,8 @@
 <?php
 
+// Auto-generated file
+// DO NOT EDIT
+
 namespace Cryptopay;
 
 use Cryptopay\Config\ConfigInterface;
@@ -16,9 +19,31 @@ use Cryptopay\Service\RateService;
 use Cryptopay\Exceptions\RequestException;
 use Cryptopay\Service\RiskService;
 use Cryptopay\Service\TransactionService;
+use Cryptopay\Api\AccountsApi;
+use Cryptopay\Api\ChannelsApi;
+use Cryptopay\Api\CoinWithdrawalsApi;
+use Cryptopay\Api\CoinsApi;
+use Cryptopay\Api\CustomersApi;
+use Cryptopay\Api\ExchangeTransfersApi;
+use Cryptopay\Api\InvoicesApi;
+use Cryptopay\Api\RatesApi;
+use Cryptopay\Api\RisksApi;
+use Cryptopay\Api\TransactionsApi;
 
 class Cryptopay
 {
+    public AccountsApi $accounts;
+    public ChannelsApi $channels;
+    public CoinWithdrawalsApi $coinWithdrawals;
+    public CoinsApi $coins;
+    public CustomersApi $customers;
+    public ExchangeTransfersApi $exchangeTransfers;
+    public InvoicesApi $invoices;
+    public RatesApi $rates;
+    public RisksApi $risks;
+    public TransactionsApi $transactions;
+
+    // Deprecated services
     private InvoiceService $invoiceService;
     private ChannelService $channelService;
     private CoinWithdrawalService $coinWithdrawalService;
@@ -32,8 +57,21 @@ class Cryptopay
     {
         $connector = new Connector($config);
 
-        $this->accountService = new AccountsService($connector);
+        $this->accounts = new AccountsApi($connector);
+        $this->channels = new ChannelsApi($connector);
+        $this->coinWithdrawals = new CoinWithdrawalsApi($connector);
+        $this->coins = new CoinsApi($connector);
+        $this->customers = new CustomersApi($connector);
+        $this->exchangeTransfers = new ExchangeTransfersApi($connector);
+        $this->invoices = new InvoicesApi($connector);
+        $this->rates = new RatesApi($connector);
+        $this->risks = new RisksApi($connector);
+        $this->transactions = new TransactionsApi($connector);
+
         $this->callbackService = new CallbackService($config->getCallbackSecret());
+
+        // Deprecated services
+        $this->accountService = new AccountsService($connector);
         $this->channelService = new ChannelService($connector);
         $this->coinWithdrawalService = new CoinWithdrawalService($connector);
         $this->invoiceService = new InvoiceService($connector);
@@ -43,6 +81,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\InvoicesApi}
      * @param array $invoiceData
      * @return object
      * @throws RequestException
@@ -53,6 +92,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\InvoicesApi}
      * @param string $staringAfter
      * @return object
      * @throws RequestException
@@ -64,6 +104,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\InvoicesApi}
      * @param string $invoiceId
      * @return object
      * @throws RequestException
@@ -75,6 +116,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\InvoicesApi}
      * @param string $customId
      * @return object
      * @throws RequestException
@@ -85,6 +127,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\ChannelsApi}
      * @param array $channelData
      * @return mixed
      * @throws Exceptions\ChannelException
@@ -96,6 +139,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\ChannelsApi}
      * @param string $channelId
      * @param array $channelData
      * @return mixed
@@ -108,6 +152,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\ChannelsApi}
      * @param string $staringAfter
      * @return object
      * @throws RequestException
@@ -119,6 +164,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\ChannelsApi}
      * @param string $channelId
      * @return object
      * @throws RequestException
@@ -130,6 +176,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\ChannelsApi}
      * @param string $customId
      * @return object
      * @throws RequestException
@@ -140,6 +187,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\ChannelsApi}
      * @param string $channelId
      * @return object
      * @throws RequestException
@@ -151,6 +199,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\ChannelsApi}
      * @param string $channelId
      * @param string $paymentId
      * @return object
@@ -163,6 +212,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\CoinWithdrawalsApi}
      * @param array $data
      * @return object
      * @throws CoinWithdrawalException
@@ -174,6 +224,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\CoinWithdrawalsApi}
      * @param string $id
      * @return object
      * @throws RequestException
@@ -185,6 +236,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\CoinWithdrawalsApi}
      * @param string $staringAfter
      * @return object
      * @throws RequestException
@@ -196,6 +248,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\CoinWithdrawalsApi}
      * @param string $id
      * @return object
      * @throws RequestException
@@ -207,6 +260,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\CoinWithdrawalsApi}
      * @param int $customId
      * @return object
      * @throws RequestException
@@ -217,6 +271,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\TransactionsApi}
      * @param array $data
      * @return object
      * @throws RequestException
@@ -228,6 +283,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\AccountsApi}
      * @return object
      * @throws RequestException
      */
@@ -237,6 +293,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\AccountsApi}
      * @param string $accountId
      * @param string|null $startingAfter
      * @return object
@@ -249,6 +306,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\RisksApi}
      * @param array $request
      * @return object
      * @throws RiskException
@@ -260,6 +318,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\RatesApi}
      * @return object
      * @throws RequestException
      */
@@ -269,6 +328,7 @@ class Cryptopay
     }
 
     /**
+     * @deprecated 2.0.0 {@see \Cryptopay\Api\RatesApi}
      * @param string $pair
      * @return object
      * @throws RequestException

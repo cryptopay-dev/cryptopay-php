@@ -1,0 +1,147 @@
+
+-
+    request:
+        method: POST
+        url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 08:55:52 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:7nusvhQwJlKNKuq0bC2eaI6h6wM='
+            Accept: ''
+        body: '{"address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","charged_amount":"100.0","charged_currency":"EUR","received_currency":"BTC","force_commit":false}'
+    response:
+        status:
+            http_version: '1.1'
+            code: '201'
+            message: Created
+        headers:
+            Date: 'Tue, 11 Jul 2023 08:55:52 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fd4794ca60e2f-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":{"id":"06a54ccb-889f-4c1f-8a59-086a84a1e2dd","custom_id":null,"customer_id":null,"address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","txid":null,"status":"new","charged_amount":"100.0","charged_currency":"EUR","received_amount":"0.00331433","received_currency":"BTC","network_fee":"0.00001944","network_fee_level":"average","fee":"0.0","fee_currency":"BTC","description":null,"exchange":{"pair":"BTCEUR","rate":"29696.0269","fee":"1.0","fee_currency":"EUR"},"risk":null,"created_at":"2023-07-11T08:55:52Z"}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 201
+            header_size: 460
+            request_size: 413
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.593633
+            namelookup_time: 0.005009
+            connect_time: 0.084079
+            pretransfer_time: 0.221188
+            size_upload: 146.0
+            size_download: 531.0
+            speed_download: 895.0
+            speed_upload: 246.0
+            download_content_length: -1.0
+            upload_content_length: 146.0
+            starttransfer_time: 0.593592
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 47866
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 221121
+            connect_time_us: 84079
+            namelookup_time_us: 5009
+            pretransfer_time_us: 221188
+            redirect_time_us: 0
+            starttransfer_time_us: 593592
+            total_time_us: 593633
+    index: 0
+-
+    request:
+        method: POST
+        url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals/06a54ccb-889f-4c1f-8a59-086a84a1e2dd/commit'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Content-Length: '0'
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            Content-Type: application/json
+            date: 'Tue, 11 Jul 2023 08:55:52 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:orRU/UT3mYtgqfSXzMnVyk1oTOo='
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 11 Jul 2023 08:55:53 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e4fd47d4f5cb75b-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":{"id":"06a54ccb-889f-4c1f-8a59-086a84a1e2dd","custom_id":null,"customer_id":null,"address":"2Mz3bcjSVHG8uQJpNjmCxp24VdTjwaqmFcJ","network":"bitcoin","txid":null,"status":"pending","charged_amount":"100.0","charged_currency":"EUR","received_amount":"0.00331433","received_currency":"BTC","network_fee":"0.00001944","network_fee_level":"average","fee":"0.0","fee_currency":"BTC","description":null,"exchange":{"pair":"BTCEUR","rate":"29696.0269","fee":"1.0","fee_currency":"EUR"},"risk":null,"created_at":"2023-07-11T08:55:52+00:00"}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/coin_withdrawals/06a54ccb-889f-4c1f-8a59-086a84a1e2dd/commit'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 309
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.635269
+            namelookup_time: 0.00549
+            connect_time: 0.115835
+            pretransfer_time: 0.302343
+            size_upload: 0.0
+            size_download: 540.0
+            speed_download: 850.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.63522
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.2
+            local_port: 47874
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 302271
+            connect_time_us: 115835
+            namelookup_time_us: 5490
+            pretransfer_time_us: 302343
+            redirect_time_us: 0
+            starttransfer_time_us: 635220
+            total_time_us: 635269
+    index: 0

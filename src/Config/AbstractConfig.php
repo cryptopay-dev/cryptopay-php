@@ -16,7 +16,7 @@ class AbstractConfig implements ConfigInterface
 
     protected int $timeout = 10;
 
-    protected ?string $callbackSecret;
+    protected string $callbackSecret = '';
 
     /**
      * @param string $baseUrl
