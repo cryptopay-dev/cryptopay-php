@@ -16,7 +16,9 @@ class TransactionsApiTest extends ApiTest
 
         $cryptopay = new Cryptopay($this->config);
 
-        $result = $cryptopay->transactions->all();
+        $result = $cryptopay->transactions->all([
+        'reference_type' => 'Invoice'
+        ]);
 
         $this->assertNotNull($result);
     }

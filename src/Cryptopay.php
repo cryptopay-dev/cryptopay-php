@@ -53,9 +53,14 @@ class Cryptopay
     private RateService $rateService;
     private RiskService $riskService;
 
+    private const VERSION = '2.0.0';
+
+    private const USER_AGENT = 'Cryptopay-PHP/' . Cryptopay::VERSION . ' PHP/' .  \PHP_VERSION;
+    private const USER_AGENT_DEPRECATED = Cryptopay::USER_AGENT . ' (deprecated)';
+
     public function __construct(ConfigInterface $config)
     {
-        $connector = new Connector($config);
+        $connector = new Connector($config, Cryptopay::USER_AGENT);
 
         $this->accounts = new AccountsApi($connector);
         $this->channels = new ChannelsApi($connector);
@@ -71,13 +76,15 @@ class Cryptopay
         $this->callbackService = new CallbackService($config->getCallbackSecret());
 
         // Deprecated services
-        $this->accountService = new AccountsService($connector);
-        $this->channelService = new ChannelService($connector);
-        $this->coinWithdrawalService = new CoinWithdrawalService($connector);
-        $this->invoiceService = new InvoiceService($connector);
-        $this->rateService = new RateService($connector);
-        $this->riskService = new RiskService($connector);
-        $this->transactionService = new TransactionService($connector);
+        $deprecatedConnector = new Connector($config, Cryptopay::USER_AGENT_DEPRECATED);
+
+        $this->accountService = new AccountsService($deprecatedConnector);
+        $this->channelService = new ChannelService($deprecatedConnector);
+        $this->coinWithdrawalService = new CoinWithdrawalService($deprecatedConnector);
+        $this->invoiceService = new InvoiceService($deprecatedConnector);
+        $this->rateService = new RateService($deprecatedConnector);
+        $this->riskService = new RiskService($deprecatedConnector);
+        $this->transactionService = new TransactionService($deprecatedConnector);
     }
 
     /**

@@ -460,7 +460,9 @@ $result = $cryptopay->risks->score($params);
 
 
 ```php
-$result = $cryptopay->transactions->all();
+$result = $cryptopay->transactions->all([
+    'reference_type' => 'Invoice'
+]);
 ```
 
 

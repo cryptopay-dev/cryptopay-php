@@ -15,6 +15,7 @@ class TestConnector extends AbstractConnector
     public function __construct(ConfigInterface $config, GuzzleClient $client)
     {
         $this->config = $config;
+        $this->userAgent = 'Cryptopay-PHP/Test';
         $this->client = $client;
     }
 }

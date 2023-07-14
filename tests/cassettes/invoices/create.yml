@@ -7,10 +7,10 @@
             Host: business-sandbox.cryptopay.me
             Expect: ''
             Accept-Encoding: ''
-            User-Agent: GuzzleHttp/7
             Content-Type: application/json
-            date: 'Tue, 11 Jul 2023 08:57:56 +0000'
-            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:B5I1lECdbL+vZfBAksMr0q2iUt0='
+            Date: 'Wed, 12 Jul 2023 07:50:21 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:sDw8eoPMwdf9XsrG/k+fF7IwrXo='
+            User-Agent: 'Cryptopay-PHP/2.0.0 PHP/7.4.33'
             Accept: ''
         body: '{"price_amount":"100.0","price_currency":"EUR","pay_currency":"BTC"}'
     response:
@@ -19,11 +19,11 @@
             code: '201'
             message: Created
         headers:
-            Date: 'Tue, 11 Jul 2023 08:57:57 GMT'
+            Date: 'Wed, 12 Jul 2023 07:50:22 GMT'
             Content-Type: 'application/json; charset=utf-8'
             Transfer-Encoding: chunked
             Connection: keep-alive
-            CF-Ray: 7e4fd7857b21b790-AMS
+            CF-Ray: 7e57b1e62cc9d0cd-AMS
             CF-Cache-Status: DYNAMIC
             Cache-Control: no-store
             Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
@@ -32,43 +32,43 @@
             x-frame-options: DENY
             Server: cloudflare
             alt-svc: 'h3=":443"; ma=86400'
-        body: '{"data":{"id":"4e79ee49-f3dd-4941-a6cc-ed0d86087cff","custom_id":null,"customer_id":null,"subscription_id":null,"status":"new","status_context":null,"address":"2MwvfYSivVfn1XEsHJmyvhbrg6qf1CqznZL","network":"bitcoin","uri":"bitcoin:2MwvfYSivVfn1XEsHJmyvhbrg6qf1CqznZL?amount=0.003517","price_amount":"100.0","price_currency":"EUR","pay_amount":"0.003517","pay_currency":"BTC","fee":"1.0","fee_currency":"EUR","paid_amount":"0.0","exchange":{"pair":"BTCEUR","rate":"28439.193","fee":"0.0","fee_currency":"EUR"},"transactions":[],"name":null,"description":null,"metadata":null,"success_redirect_url":null,"unsuccess_redirect_url":null,"hosted_page_url":"https://hosted-business-sandbox.cryptopay.me/invoices/4e79ee49-f3dd-4941-a6cc-ed0d86087cff","created_at":"2023-07-11T08:57:57+00:00","expires_at":"2023-07-11T09:07:57+00:00"}}'
+        body: '{"data":{"id":"03692121-10b9-40bf-a79f-f9ad1f89f13d","custom_id":null,"customer_id":null,"subscription_id":null,"status":"new","status_context":null,"address":"2NGDeKppHSbBDnshnSQ3BHvXQcxCu9FvLTP","network":"bitcoin","uri":"bitcoin:2NGDeKppHSbBDnshnSQ3BHvXQcxCu9FvLTP?amount=0.00349","price_amount":"100.0","price_currency":"EUR","pay_amount":"0.00349","pay_currency":"BTC","fee":"1.0","fee_currency":"EUR","paid_amount":"0.0","exchange":{"pair":"BTCEUR","rate":"28657.5853","fee":"0.0","fee_currency":"EUR"},"transactions":[],"name":null,"description":null,"metadata":null,"success_redirect_url":null,"unsuccess_redirect_url":null,"hosted_page_url":"https://hosted-business-sandbox.cryptopay.me/invoices/03692121-10b9-40bf-a79f-f9ad1f89f13d","created_at":"2023-07-12T07:50:22+00:00","expires_at":"2023-07-12T08:00:22+00:00"}}'
         curl_info:
             url: 'https://business-sandbox.cryptopay.me/api/invoices'
             content_type: 'application/json; charset=utf-8'
             http_code: 201
             header_size: 460
-            request_size: 326
+            request_size: 344
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.579051
-            namelookup_time: 0.005323
-            connect_time: 0.144666
-            pretransfer_time: 0.329312
+            total_time: 0.638799
+            namelookup_time: 0.008216
+            connect_time: 0.094941
+            pretransfer_time: 0.259097
             size_upload: 68.0
-            size_download: 827.0
-            speed_download: 1428.0
-            speed_upload: 117.0
+            size_download: 826.0
+            speed_download: 1294.0
+            speed_upload: 106.0
             download_content_length: -1.0
             upload_content_length: 68.0
-            starttransfer_time: 0.578988
+            starttransfer_time: 0.638648
             redirect_time: 0.0
             redirect_url: ''
             primary_ip: 172.66.43.16
             certinfo: {  }
             primary_port: 443
-            local_ip: 192.168.208.2
-            local_port: 60932
+            local_ip: 192.168.208.3
+            local_port: 42886
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 329271
-            connect_time_us: 144666
-            namelookup_time_us: 5323
-            pretransfer_time_us: 329312
+            appconnect_time_us: 259014
+            connect_time_us: 94941
+            namelookup_time_us: 8216
+            pretransfer_time_us: 259097
             redirect_time_us: 0
-            starttransfer_time_us: 578988
-            total_time_us: 579051
+            starttransfer_time_us: 638648
+            total_time_us: 638799
     index: 0

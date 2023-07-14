@@ -28,7 +28,7 @@ abstract class BaseTest extends TestCase
             ->withBaseUrl($this->baseUrl)
             ->withTimeout($this->timeout);
 
-        $this->connector = new Connector($this->config);
+        $this->connector = new Connector($this->config, 'Cryptopay-PHP/Test');
 
         parent::__construct($name, $data, $dataName);
     }
