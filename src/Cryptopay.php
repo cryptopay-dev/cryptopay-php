@@ -28,6 +28,7 @@ use Cryptopay\Api\ExchangeTransfersApi;
 use Cryptopay\Api\InvoicesApi;
 use Cryptopay\Api\RatesApi;
 use Cryptopay\Api\RisksApi;
+use Cryptopay\Api\SubscriptionsApi;
 use Cryptopay\Api\TransactionsApi;
 
 class Cryptopay
@@ -41,6 +42,7 @@ class Cryptopay
     public InvoicesApi $invoices;
     public RatesApi $rates;
     public RisksApi $risks;
+    public SubscriptionsApi $subscriptions;
     public TransactionsApi $transactions;
 
     // Deprecated services
@@ -53,7 +55,7 @@ class Cryptopay
     private RateService $rateService;
     private RiskService $riskService;
 
-    private const VERSION = '2.0.0';
+    private const VERSION = '2.1.0';
 
     private const USER_AGENT = 'Cryptopay-PHP/' . Cryptopay::VERSION . ' PHP/' .  \PHP_VERSION;
     private const USER_AGENT_DEPRECATED = Cryptopay::USER_AGENT . ' (deprecated)';
@@ -71,6 +73,7 @@ class Cryptopay
         $this->invoices = new InvoicesApi($connector);
         $this->rates = new RatesApi($connector);
         $this->risks = new RisksApi($connector);
+        $this->subscriptions = new SubscriptionsApi($connector);
         $this->transactions = new TransactionsApi($connector);
 
         $this->callbackService = new CallbackService($config->getCallbackSecret());
