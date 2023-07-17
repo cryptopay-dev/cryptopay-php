@@ -20,6 +20,7 @@ For more information, please visit [Cryptopay API docs](https://developers.crypt
    * [Invoices](#invoicesapi)
    * [Rates](#ratesapi)
    * [Risks](#risksapi)
+   * [Subscriptions](#subscriptionsapi)
    * [Transactions](#transactionsapi)
 * [Callbacks](#callbacks)
 
@@ -450,6 +451,61 @@ $params = [
 ];
 
 $result = $cryptopay->risks->score($params);
+```
+
+## Subscriptions
+
+
+### List subscriptions
+
+
+```php
+$result = $cryptopay->subscriptions->all();
+```
+
+### Cancel a subscription
+
+
+```php
+$subscriptionId = '7dd7da55-2fd6-445e-8c7c-6c2c85d135d7';
+
+$result = $cryptopay->subscriptions->cancel($subscriptionId);
+```
+
+### Create a subscription
+
+
+```php
+$startsAt = (new \DateTime())->add(\DateInterval::createFromDateString('7 days'));
+$params = [
+  'name' => 'Subscription name',
+  'amount' => '100.0',
+  'currency' => 'EUR',
+  'period' => 'month',
+  'period_quantity' => 3,
+  'payer_email' => 'user@example.com',
+  'starts_at' => $startsAt->format(\DateTime::ATOM)
+];
+
+$result = $cryptopay->subscriptions->create($params);
+```
+
+### Retrieve a subscription
+
+
+```php
+$subscriptionId = '64249ede-8969-4d5c-a042-806f9c3e7db3';
+
+$result = $cryptopay->subscriptions->retrieve($subscriptionId);
+```
+
+### Retrieve a subscription by custom_id
+
+
+```php
+$customId = 'PAYMENT-123';
+
+$result = $cryptopay->subscriptions->retrieveByCustomId($customId);
 ```
 
 ## Transactions

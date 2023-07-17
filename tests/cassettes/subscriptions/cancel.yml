@@ -1,0 +1,74 @@
+
+-
+    request:
+        method: POST
+        url: 'https://business-sandbox.cryptopay.me/api/subscriptions/7dd7da55-2fd6-445e-8c7c-6c2c85d135d7/cancel'
+        headers:
+            Host: business-sandbox.cryptopay.me
+            Content-Length: '0'
+            Accept-Encoding: ''
+            Content-Type: application/json
+            Date: 'Mon, 17 Jul 2023 09:33:06 +0000'
+            Authorization: 'HMAC OtzdZAvAkmw4vAYniZ4ljw:8p9LeEnzh9ndFmwEj4M8UH86k1M='
+            User-Agent: 'Cryptopay-PHP/2.1.0 PHP/7.4.33'
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Mon, 17 Jul 2023 09:33:07 GMT'
+            Content-Type: 'application/json; charset=utf-8'
+            Transfer-Encoding: chunked
+            Connection: keep-alive
+            CF-Ray: 7e817b483813b7af-AMS
+            CF-Cache-Status: DYNAMIC
+            Cache-Control: no-store
+            Strict-Transport-Security: 'max-age=15552000; includeSubDomains'
+            Vary: Accept-Encoding
+            content-security-policy: 'frame-ancestors ''none'''
+            x-content-type-options: nosniff
+            x-frame-options: DENY
+            Server: cloudflare
+            alt-svc: 'h3=":443"; ma=86400'
+        body: '{"data":{"id":"7dd7da55-2fd6-445e-8c7c-6c2c85d135d7","status":"cancelled","custom_id":null,"name":"Subscription name","amount":"100.0","currency":"EUR","period":"month","period_quantity":3,"current_period_starts_at":"2023-07-17T09:27:43+00:00","current_period_ends_at":"2023-07-24T09:27:43+00:00","current_period_paid":false,"payer_email":"user@example.com","payer_name":null,"product_name":null,"product_description":null,"success_redirect_url":null,"unsuccess_redirect_url":null,"created_at":"2023-07-17T09:27:43+00:00","cancelled_at":"2023-07-17T09:33:07+00:00"}}'
+        curl_info:
+            url: 'https://business-sandbox.cryptopay.me/api/subscriptions/7dd7da55-2fd6-445e-8c7c-6c2c85d135d7/cancel'
+            content_type: 'application/json; charset=utf-8'
+            http_code: 200
+            header_size: 478
+            request_size: 324
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.526309
+            namelookup_time: 0.093494
+            connect_time: 0.184553
+            pretransfer_time: 0.326651
+            size_upload: 0.0
+            size_download: 566.0
+            speed_download: 1076.0
+            speed_upload: 0.0
+            download_content_length: -1.0
+            upload_content_length: -1.0
+            starttransfer_time: 0.52627
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 172.66.43.16
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.208.4
+            local_port: 56280
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 326603
+            connect_time_us: 184553
+            namelookup_time_us: 93494
+            pretransfer_time_us: 326651
+            redirect_time_us: 0
+            starttransfer_time_us: 526270
+            total_time_us: 526309
+    index: 0

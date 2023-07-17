@@ -12,7 +12,7 @@ abstract class ApiTest extends BaseTest
             VCR::configure()
                 ->setCassettePath('tests/cassettes')
                 ->enableLibraryHooks(['curl'])
-                ->enableRequestMatchers(['method', 'url', 'query_string', 'body'])
+                ->enableRequestMatchers(['method', 'url', 'query_string'])
                 ->setMode('once');
             VCR::turnOn();
         }
