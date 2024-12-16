@@ -19,7 +19,6 @@ For more information, please visit [Cryptopay API docs](https://developers.crypt
    * [ExchangeTransfers](#exchangetransfersapi)
    * [Invoices](#invoicesapi)
    * [Rates](#ratesapi)
-   * [Risks](#risksapi)
    * [Subscriptions](#subscriptionsapi)
    * [Transactions](#transactionsapi)
 * [Callbacks](#callbacks)
@@ -434,23 +433,6 @@ $result = $cryptopay->rates->all();
 
 ```php
 $result = $cryptopay->rates->retrieve('BTC', 'EUR');
-```
-
-## Risks
-
-[Risks API docs](https://developers.cryptopay.me/guides/risks)
-
-### Score a coin address
-
-
-```php
-$params = [
-  'address' => '2N9wPGx67zdSeAbXi15qHgoZ9Hb9Uxhd2uQ',
-  'currency' => 'BTC',
-  'type' => 'source_of_funds'
-];
-
-$result = $cryptopay->risks->score($params);
 ```
 
 ## Subscriptions

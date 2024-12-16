@@ -27,7 +27,6 @@ use Cryptopay\Api\CustomersApi;
 use Cryptopay\Api\ExchangeTransfersApi;
 use Cryptopay\Api\InvoicesApi;
 use Cryptopay\Api\RatesApi;
-use Cryptopay\Api\RisksApi;
 use Cryptopay\Api\SubscriptionsApi;
 use Cryptopay\Api\TransactionsApi;
 
@@ -41,7 +40,6 @@ class Cryptopay
     public ExchangeTransfersApi $exchangeTransfers;
     public InvoicesApi $invoices;
     public RatesApi $rates;
-    public RisksApi $risks;
     public SubscriptionsApi $subscriptions;
     public TransactionsApi $transactions;
 
@@ -72,7 +70,6 @@ class Cryptopay
         $this->exchangeTransfers = new ExchangeTransfersApi($connector);
         $this->invoices = new InvoicesApi($connector);
         $this->rates = new RatesApi($connector);
-        $this->risks = new RisksApi($connector);
         $this->subscriptions = new SubscriptionsApi($connector);
         $this->transactions = new TransactionsApi($connector);
 
