@@ -53,7 +53,7 @@ class Cryptopay
     private RateService $rateService;
     private RiskService $riskService;
 
-    private const VERSION = '2.2.0';
+    private const VERSION = '2.3.0';
 
     private const USER_AGENT = 'Cryptopay-PHP/' . Cryptopay::VERSION . ' PHP/' .  \PHP_VERSION;
     private const USER_AGENT_DEPRECATED = Cryptopay::USER_AGENT . ' (deprecated)';

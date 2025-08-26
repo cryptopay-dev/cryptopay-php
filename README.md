@@ -386,9 +386,8 @@ $result = $cryptopay->invoices->createRecalculation($invoiceId, $params);
 
 ```php
 $invoiceId = '331646a6-c8b5-430d-adfb-021d11ff6cd0';
-$params = ['address' => '0xf3532c1fd002665ec54d46a50787e0c69c76cd44'];
 
-$result = $cryptopay->invoices->createRefund($invoiceId, $params);
+$result = $cryptopay->invoices->createRefund($invoiceId);
 ```
 
 ### List invoice refunds
